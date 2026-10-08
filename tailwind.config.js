@@ -1,0 +1,101 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+      },
+      colors: {
+        primary: {
+          50: '#f0f7ff',
+          100: '#e0effe',
+          200: '#bae0fd',
+          300: '#7dc7fc',
+          400: '#36a9f6',
+          500: '#0c8de7',
+          600: '#006fc5',
+          700: '#0159a0',
+          800: '#064c84',
+          900: '#0a406d',
+          950: '#072849',
+        },
+        secondary: {
+          50: '#f4fdf9',
+          100: '#e6fcf0',
+          200: '#c9f9e1',
+          300: '#97f0c7',
+          400: '#5ce0a4',
+          500: '#30c982',
+          600: '#1cac68',
+          700: '#168854',
+          800: '#176c46',
+          900: '#15583b',
+          950: '#073320',
+        },
+        accent: {
+          50: '#fff8eb',
+          100: '#feebc6',
+          200: '#fdd589',
+          300: '#fcb84b',
+          400: '#fb9b21',
+          500: '#f37c0a',
+          600: '#d95c06',
+          700: '#b54108',
+          800: '#92330e',
+          900: '#782b0f',
+          950: '#441406',
+        },
+        neutral: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#020617',
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.8s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+        'fade-in-down': 'fadeInDown 0.8s ease-out forwards',
+        'scale-in': 'scaleIn 0.6s ease-out forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'gradient': 'gradient 8s ease infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
